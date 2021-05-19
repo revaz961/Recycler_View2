@@ -18,6 +18,9 @@ class FullDescriptionActivity : AppCompatActivity() {
     private fun init(){
         val model:TechnologyModel = intent.extras?.getParcelable("model")!!
         setModel(model)
+        binding.btnBack.setOnClickListener {
+            finish()
+        }
     }
 
     private fun setModel(model: TechnologyModel){
