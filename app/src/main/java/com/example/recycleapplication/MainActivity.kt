@@ -39,51 +39,49 @@ class MainActivity : AppCompatActivity() {
     private fun setData() {
         technologies.add(
             TechnologyModel(
-                R.drawable.kotlin,
                 getString(R.string.kotlin_title),
                 getString(R.string.kotlin_description),
+                R.drawable.kotlin
             )
         )
         technologies.add(
             TechnologyModel(
-                R.drawable.java,
                 getString(R.string.java_title),
                 getString(R.string.java_description),
+                R.drawable.java,
             )
         )
         technologies.add(
             TechnologyModel(
-                R.drawable.c_sharp,
                 getString(R.string.csharp_title),
                 getString(R.string.csharp_description),
             )
         )
         technologies.add(
             TechnologyModel(
-                R.drawable.cplus,
                 getString(R.string.cplus_title),
                 getString(R.string.cplus_description),
+                R.drawable.cplus,
             )
         )
         technologies.add(
             TechnologyModel(
-                R.drawable.nodejs,
                 getString(R.string.js_title),
                 getString(R.string.js_description),
+                R.drawable.nodejs,
             )
         )
         technologies.add(
             TechnologyModel(
-                R.drawable.angular,
                 getString(R.string.angular_title),
                 getString(R.string.angular_description),
             )
         )
         technologies.add(
             TechnologyModel(
-                R.drawable.react,
                 getString(R.string.react_title),
                 getString(R.string.react_description),
+                R.drawable.react
             )
         )
     }

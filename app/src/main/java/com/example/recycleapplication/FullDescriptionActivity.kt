@@ -24,7 +24,10 @@ class FullDescriptionActivity : AppCompatActivity() {
     }
 
     private fun setModel(model: TechnologyModel){
+        if(model.image != null)
         binding.imgTechnology.setImageResource(model.image)
+        else
+            binding.tvTitle.text = model.title
         binding.tvDescription.text = model.description
     }
 }

@@ -4,4 +4,4 @@ import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-data class TechnologyModel(val image:Int,val title:String, val description:String): Parcelable
+data class TechnologyModel(val title:String, val description:String,val image:Int?=null): Parcelable
