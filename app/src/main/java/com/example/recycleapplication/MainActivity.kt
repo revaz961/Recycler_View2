@@ -23,10 +23,13 @@ class MainActivity : AppCompatActivity() {
 
     private fun init() {
         setData()
-        adapter = RecycleViewAdapter(technologies){
-            val intent = Intent(this,FullDescriptionActivity::class.java)
-            intent.putExtra("model",it)
+        adapter = RecycleViewAdapter(technologies, {
+            val intent = Intent(this, FullDescriptionActivity::class.java)
+            intent.putExtra("model", it)
             startActivity(intent)
+        }) {
+            technologies.removeAt(it)
+            adapter.notifyItemRemoved(it)
         }
         binding.rvTechnologies.layoutManager = LinearLayoutManager(this)
         binding.rvTechnologies.adapter = adapter

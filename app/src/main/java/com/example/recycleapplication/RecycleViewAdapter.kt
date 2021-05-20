@@ -2,12 +2,17 @@ package com.example.recycleapplication
 
 import android.content.Intent
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.recycleapplication.databinding.RecycleItemBinding
 
 
-class RecycleViewAdapter(private val items: MutableList<TechnologyModel>,private val click:(TechnologyModel)->Unit) :
+class RecycleViewAdapter(
+    private val items: MutableList<TechnologyModel>,
+    private val click: (TechnologyModel) -> Unit,
+    private val longClick: (Int) -> Unit
+) :
     RecyclerView.Adapter<RecycleViewAdapter.ItemViewHolder>() {
 
 
@@ -32,6 +37,10 @@ class RecycleViewAdapter(private val items: MutableList<TechnologyModel>,private
             binding.tvDescription.text = model.description
             binding.root.setOnClickListener {
                 click(model)
+            }
+            binding.root.setOnLongClickListener {
+                longClick(adapterPosition)
+                return@setOnLongClickListener true
             }
         }
     }
